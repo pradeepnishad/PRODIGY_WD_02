@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20+Charted&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #1C1678;
+	font-size: 60.92%;
+}
+
+.main{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.box{
+	width: 30%;
+	height: 30vh;
+	background-color: #8576FF;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	border-radius: 30px;
+	color: white;
+}
+
+.head-text{
+	font-family: "Jersey 10", sans-serif;
+	font-size: 3.2rem;
+}
+
+.time-text{
+	font-size: 1.2rem;
+	font-family: "Kanit", sans-serif;
+}
+
+.main-btn button{
+	font-size: 1.1rem;
+	font-family: "Kanit", sans-serif;
+	background-color: #A3FFD6;
+	margin-right: 10px;
+	margin-top: 10px;
+
+}
+
+
+@media screen and (max-width: 600px) {
+   	
+	.box{
+		width: 90%;
+	}
+
+	.head-text{
+		font-family: "Jersey 10", sans-serif;
+		font-size: 2.2rem;
+	}
+	
+	.time-text{
+		font-size: 1rem;
+	}
+	
+	
+
+  }
+
+
+  @media screen and (max-width: 950px) {
+   	
+	.box{
+		width: 70%;
+	}
+	
+	.head-text{
+		font-family: "Jersey 10", sans-serif;
+		font-size: 4.2rem;
+	}
+	
+	.time-text{
+		font-size: 2rem;
+	}
+	
+	.main-btn button{
+		font-size: 2rem;
+	}
+
+  }
