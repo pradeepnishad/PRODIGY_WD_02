@@ -57,6 +57,10 @@ body{
 	background-color: #ff856d;
 }
 
+.main-btn button:focus{
+	background-color: #ff856d;
+}
+
 
 @media screen and (max-width: 600px) {
    	
