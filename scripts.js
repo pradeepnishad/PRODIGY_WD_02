@@ -6,6 +6,7 @@
 
         let timerInterval;
         let totalMilliseconds = 0;
+        let lapTimes = [];
 
         function updateDisplay() {
             const hours = Math.floor(totalMilliseconds / 3600000);
@@ -27,12 +28,29 @@
             }, 10);
         });
 
+        function updateLapList() {
+            const lapList = document.getElementById("lapList");
+            lapList.innerHTML = "";
+            lapTimes.forEach((lap, index) => {
+                const li = document.createElement("li");
+                li.textContent = `Lap ${index + 1}: ${lap}`;
+                lapList.appendChild(li);
+            });
+        }
+
         document.getElementById('stop').addEventListener('click', () => {
             clearInterval(timerInterval);
+            if (totalMilliseconds > 0) {
+                const formattedTime = new Date(totalMilliseconds).toISOString().substr(11, 8);
+                lapTimes.push(formattedTime);
+                updateLapList();
+            }
         });
 
         document.getElementById('reset').addEventListener('click', () => {
             clearInterval(timerInterval);
             totalMilliseconds = 0;
+            lapTimes = [];
             updateDisplay();
+            updateLapList();
         });
